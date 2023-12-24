@@ -16,7 +16,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                cat Hello.txt
+                 def helloContent = readFile('hello.txt')
+                    echo "Content of hello.txt: ${helloContent}
             }
         }
     }
