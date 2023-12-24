@@ -16,6 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
+                cat Hello.txt
             }
         }
     }
