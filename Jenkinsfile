@@ -21,7 +21,7 @@ pipeline {
         stage('Read Hello.txt') {
             steps {
                 script {
-                def helloContent = readFile('Hello.txt').trim()
+                def helloContent = sh(script: 'cat Hello.txt', returnStdout: true).trim()
                 echo "Content of Hello.txt: ${helloContent}
                 }
             }
