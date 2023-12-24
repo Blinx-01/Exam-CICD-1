@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                 def helloContent = readFile('Hello.txt')
-                echo "Content of hello.txt: ${helloContent}
+                echo "Content of Hello.txt: ${helloContent}
                 }
             }
         }
